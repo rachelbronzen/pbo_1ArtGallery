@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
-public class Main {
-    public static void main(String[] args) {
+public class Main{
+    public static void main(String[] args){
         Inventory inventory = new Inventory();
         Scanner scanner = new Scanner(System.in);
         int pilihan;
@@ -17,7 +17,7 @@ public class Main {
             pilihan = scanner.nextInt();
             scanner.nextLine();
 
-            switch (pilihan) {
+            switch(pilihan){
                 case 1:
                     System.out.print("\nArt Title: ");
                     String judulArt = scanner.nextLine();
@@ -49,7 +49,7 @@ public class Main {
                 default:
                     System.out.println("The number is invalid. Try to input another number.");
             }
-        } while (pilihan != 4);
+        } while(pilihan != 4);
 
         scanner.close();
     }

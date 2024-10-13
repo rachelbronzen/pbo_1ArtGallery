@@ -11,28 +11,28 @@ public class DataArt {
         this.judulArt = judulArt;
     }
 
-    public String getNomorProduk() {
+    public String getNomorProduk(){
         return nomorProduk;
     }
 
-    public String getNamaPenulis() {
+    public String getNamaPenulis(){
         return namaPenulis;
     }
 
-    public double getHarga() {
+    public double getHarga(){
         return harga;
     }
     
-    public String getJudulArt() {
+    public String getJudulArt(){
         return judulArt;
     }
 
-    public void setJudulArt(String judulArt) {
+    public void setJudulArt(String judulArt){
         this.judulArt = judulArt;
     }
 
     @Override
-    public String toString() {
+    public String toString(){
         return "Art Title: " + judulArt + ", The Artist: " + namaPenulis + ", The Price: " + harga;
     }
 }
