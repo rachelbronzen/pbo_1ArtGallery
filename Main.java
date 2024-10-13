@@ -57,27 +57,28 @@ public class Main {
         Inventory inventory = new Inventory();
         Scanner scanner = new Scanner(System.in);
         boolean running = true;
+        System.out.println("\n >>>  The Art Gallery  <<<");
 
         while (running) {
-            System.out.println("\nPilih opsi:");
-            System.out.println("1. Tambah Item");
-            System.out.println("2. Hapus Item");
-            System.out.println("3. Tampilkan Item");
-            System.out.println("4. Keluar");
-            System.out.print("Masukkan pilihan: ");
+            System.out.println("\nPlease choose this command");
+            System.out.println("1. Add Item");
+            System.out.println("2. Remove Item");
+            System.out.println("3. Show Item");
+            System.out.println("4. Exit");
+            System.out.print("Enter number: ");
             int choice = scanner.nextInt();
             scanner.nextLine();
             System.out.println();
             switch (choice) {
                 case 1:
-                    System.out.print("Masukkan judul art: ");
+                    System.out.print("\nArt Title: ");
                     String title = scanner.nextLine();
-                    System.out.print("Masukkan nomor gallery: ");
+                    System.out.print("Number of Product: ");
                     int galleryNumber = scanner.nextInt();
                     scanner.nextLine();
-                    System.out.print("Masukkan nama penulis: ");
+                    System.out.print("The Artist: ");
                     String author = scanner.nextLine();
-                    System.out.print("Masukkan harga: ");
+                    System.out.print("The Price: ");
                     double price = scanner.nextDouble();
                     System.out.print("Masukkan jumlah item: ");
                     int jumlah = scanner.nextInt();
@@ -86,7 +87,7 @@ public class Main {
                     inventory.tambahItem(newItem, jumlah);
                     break;
                 case 2:
-                    System.out.print("Masukkan judul art yang akan dihapus: ");
+                    System.out.print("Number of Product you want to remove: ");
                     String titleToRemove = scanner.nextLine();
                     inventory.hapusItem(titleToRemove);
                     break;
@@ -94,10 +95,11 @@ public class Main {
                     inventory.tampilkanItem();
                     break;
                 case 4:
+                    System.out.println("\nThank you! Have a nice day!");
                     running = false;
                     break;
                 default:
-                    System.out.println("Pilihan tidak valid.");
+                    System.out.println("The number is invalid. Try to input another number.");
             }
         }
 
