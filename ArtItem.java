@@ -1,34 +1,38 @@
-public class ArtItem {
-    private String title;
-    private int galleryNumber;
-    private String author;
-    private double price;
+public class DataArt {
+    private String nomorProduk;
+    private String namaPenulis;
+    private double harga;
+    private String judulArt;
 
-    public ArtItem(String title, int galleryNumber, String author, double price) {
-        this.title = title;
-        this.galleryNumber = galleryNumber;
-        this.author = author;
-        this.price = price;
+    public DataArt(String nomorProduk, String namaPenulis, double harga, String judulArt) {
+        this.nomorProduk = nomorProduk;
+        this.namaPenulis = namaPenulis;
+        this.harga = harga;
+        this.judulArt = judulArt;
     }
 
-    public String getTitle() {
-        return title;
+    public String getNomorProduk() {
+        return nomorProduk;
     }
 
-    public int getGalleryNumber() {
-        return galleryNumber;
+    public String getNamaPenulis() {
+        return namaPenulis;
     }
 
-    public String getAuthor() {
-        return author;
+    public double getHarga() {
+        return harga;
+    }
+    
+    public String getJudulArt() {
+        return judulArt;
     }
 
-    public double getPrice() {
-        return price;
+    public void setJudulArt(String judulArt) {
+        this.judulArt = judulArt;
     }
 
     @Override
     public String toString() {
-        return "Judul: " + title + ", Nomor Gallery: " + galleryNumber + ", Penulis: " + author + ", Harga: " + price;
+        return "Art Title: " + judulArt + ", The Artist: " + namaPenulis + ", The Price: " + harga;
     }
 }
